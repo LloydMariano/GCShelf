@@ -1,0 +1,66 @@
+<div class="title">
+  <h1>Add Books</h1>
+  <hr>
+</div> 
+<form [formGroup]="form" >
+    <div class="form-row">
+      <div class="form-group">
+        <label for="inputEmail4">Book Title</label>
+        <input type="text" formControlName="booktitle_fld" class="form-control" id="title" placeholder="Book Title" >
+      </div>
+      <div class="form-group">
+        <label for="inputEmail4">Book Edition</label>
+        <input type="text" formControlName="booked_fld" class="form-control" id="title" placeholder="Book Edition" >
+      </div>
+      <div class="form-group">
+        <label for="inputPassword4">Book Author</label>
+        <input type="text" class="form-control" formControlName="author_fld" id="author" placeholder="Book Author">
+      </div>
+      <div class="form-group">
+        <label for="inputPassword4">Book Publisher</label>
+        <input type="text" class="form-control" formControlName="publisher_fld" id="publisher" placeholder="Book Publisher">
+      </div>
+      <div class="form-group">
+        <label for="inputPassword4">Book Code</label>
+        <input type="text" class="form-control" formControlName="code_fld" id="code" placeholder="Book Code">
+      </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-4">
+      <label for="inputAddress">Date Publish</label>
+      <input type="date" class="form-control" formControlName="datepub_fld" id="Date" placeholder="Date Publish">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="inputState">Category</label>
+        <select id="inputState" class="form-control" formControlName="categ_fld">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1" class="form-label">Book Details</label>
+        <textarea class="form-control" formControlName="bookdet_fld" id="exampleFormControlTextarea1" rows="10"></textarea>
+      </div>
+      
+      <div class="row">
+        <div class="form-group col-md-4">
+            <label for="exampleFormControlFile1">Example file input: </label>  &nbsp;
+            <input type="file" (change)="pic($event)" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+          <div class="form-group col-md-4">
+             <label for="exampleFormControlFile1">Example file input: </label>  &nbsp;
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+        </div>
+
+    </div>
+    
+    <div class="buttons">
+        
+    <button type="button" class="btn btn-primary" onclick="history.back()">cancel</button>
+    <button  type="submit" (click)="onSubmit($event)" class="btn btn-primary">Save</button>
+    
+    </div>
+  </form>

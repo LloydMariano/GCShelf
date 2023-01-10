@@ -1,0 +1,65 @@
+.box{
+    padding: 2.7%;
+    margin-top: 3%;
+    border-radius: 20px;
+    box-shadow: 10px 10px lightblue;
+    border: solid gray 1px;
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+h1{
+  color: dimgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 50px;
+}
+h1 .bookt{
+    font-size: 10%;
+}
+
+img{
+    max-width: 90%;
+}
+
+ .row{
+    padding-top: 20px;
+ }
+ 
+ .col p{
+    text-align: center;
+ }
+ .input-group{
+    margin-top: 10px;
+    padding-left: 35%;
+
+  }
+  .book-title{
+    margin-top: -5%;
+  }
+
+  .btn{
+    margin-right: 5%;
+  }
+   
+  .category{
+    text-align: left;
+    border-style: none solid none none;
+  }
+  .author{
+    border-style: none solid none none;          
+  }
+  
+  .book-details{
+    color: #6B728E;
+  }
+  .book_publisher{
+    border-style: none solid none none;
+  }
+  .book_edition{
+    border-style: none solid none none;
+  }
+
+  .back{
+    margin-bottom: -2%;
+  }

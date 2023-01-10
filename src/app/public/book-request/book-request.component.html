@@ -1,0 +1,50 @@
+<div class="title">
+    <h1>Request Form</h1>
+    <hr>
+  </div> 
+  <form [formGroup]="formReq"  >
+      <div class="form-row">
+        <div class="form-group">
+          <label for="inputEmail4">Student Name</label>
+          <input type="text" formControlName="studname_fld" class="form-control" id="stud_name" placeholder="Student Name" >
+        </div>
+        <div class="form-group">
+          <label for="inputEmail4">Student Number</label>
+          <input type="text" formControlName="studnum_fld" class="form-control" id="stud_num" placeholder="Student Number" >
+        </div>
+        <div class="form-group">
+          <label for="inputEmail4">Department / Program</label>
+          <input type="text" formControlName="dept_fld" class="form-control" id="dept" placeholder="Department / Program" >
+        </div>
+        <div class="form-group">
+          <label for="inputPassword4">Book Title</label>
+          <input type="text" class="form-control" formControlName="booktitle_fld" id="title" placeholder="Book Title">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword4">Book Edition</label>
+          <input type="text" class="form-control" formControlName="booked_fld" id="book_ed" placeholder="Book Edition">
+        </div>
+        <div class="form-group">
+          <label for="inputEmail4">Request Code</label>
+          <input type="text" formControlName="reqcode_fld" class="form-control" id="reqcode" placeholder="Request Code" >
+        </div>
+      </div>
+      <div class="row">
+      <div class="form-group col-md-4">
+        <label for="inputAddress">Date of Request</label>
+        <input type="date" class="form-control" formControlName="datereq_fld" id="Date" placeholder="Date Requested">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputAddress">Date of Return</label>
+        <input type="date" class="form-control" formControlName="datereturn_fld" id="Date" placeholder="Date Return">
+      </div>
+      </div>
+      
+      <div class="buttons">
+          
+      <button type="button" class="btn btn-primary" >cancel</button>
+      <button  type="submit" (click)="onSubmit($event)" class="btn btn-primary">Save</button>
+      
+      </div>
+    </form>
+  

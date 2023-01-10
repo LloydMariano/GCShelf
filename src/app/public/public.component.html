@@ -1,0 +1,46 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+    <mat-toolbar class="example-toolbar">
+        
+        <h1 class="example-app-name">GC SHELF</h1>
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+
+      <p class="ms-auto p-2"><small>{{todayDate | date:'MMM d, y, h:mm a'}}</small></p> 
+
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <div class="side-contents">
+                <img src="../../assets/ID-PICTURE.png" alt="Picture" class="img-fluid rounded-circle mt-3 mb-4">
+                <p>{{fname_fld}} {{lname_fld}}</p>
+                <h5>{{dept_fld}} / {{program_fld}}</h5>
+        <hr>
+    </div>
+        
+        <mat-nav-list>
+            
+                    <mat-list class="mt-3">
+                            <div class="menu">
+                                <mat-list-item><mat-icon>home</mat-icon><a routerLink="/public/home" style="text-decoration: none; color: white;">   Home </a></mat-list-item>
+                                <mat-list-item><mat-icon>star</mat-icon><a routerLink="/public/favorite" style="text-decoration: none; color: white;">   Favorites </a></mat-list-item>
+                                <mat-list-item><mat-icon>category</mat-icon><a routerLink="/public/category" style="text-decoration: none; color: white;">  Categories </a></mat-list-item>
+                                <mat-list-item><mat-icon>speaker_notes</mat-icon><a routerLink="/public/request-history" style="text-decoration: none; color: white;">   Requests </a></mat-list-item>
+                        
+                                <mat-list-item class="logout" ><mat-icon>logout</mat-icon><a (click)="logout()"  style="text-decoration: none; color: white; width: 10%;"> Logout </a></mat-list-item>
+                          
+                                         
+                                    </div>
+                    </mat-list>
+            
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  
+
+

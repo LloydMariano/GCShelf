@@ -1,0 +1,45 @@
+<div class="box">
+    <div class="input-group">
+        <input type="search" class="form-control rounded col-md-2" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+        <button type="button" class="btn btn-primary">search</button>
+      </div>
+      
+      <h1> Library Books</h1>  
+      <div  class="button-add">
+        <button mat-button (click)="openDialog()" class="add"><i class="bi bi-plus "></i>Add Book</button>
+      </div>
+      
+      <div class="tbl" >
+          <table class="table" >
+              <thead>
+                  <tr>
+                      <th scope="col">Book Title</th>
+                      <th scope="col">Book Author</th>
+                      <th scope="col">Book Publisher</th>
+                      <th scope="col">Date Publish</th>
+                      <th scope="col">Book Description</th>
+                      <th scope="col">Book Category</th>
+                      <th scope="col">Number of Pages</th>
+                      <th scope="col" >Book Cover</th>
+                      <th scope="col">Actions</th>
+                  </tr>
+              </thead>
+                  <tbody>
+                      <tr *ngFor="let book of books">
+                          <td scope="row" >{{book.booktitle_fld}}</td>
+                          <td>{{book.author_fld}}</td>
+                          <td>{{book.publisher_fld}}</td>
+                          <td>{{book.datepub_fld}}</td>
+                          <td class="detail">{{book.bookdet_fld}}</td>
+                          <td>{{book.categ_fld}}</td>
+                          <td>numpage</td>
+                          <td><img [src]="'http://127.0.0.1:8000/'+book.coverpic_fld"></td>
+                          <td>
+                            <button class="view"><i class="bi bi-eye "></i></button>
+                            <button class="delete"><i class="bi bi-trash"></i></button>
+                          </td>
+                      </tr>
+                  </tbody>
+          </table>
+      </div> 
+    </div>  

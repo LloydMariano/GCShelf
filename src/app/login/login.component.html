@@ -1,0 +1,38 @@
+<section class="vh-100">
+    
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="../../assets/Reading book-pana.png"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="login-form col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <h1>Welcome!</h1>
+          <form [formGroup]="frmGroup" >
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example3">Email address</label>
+              <input type="email" id="email" formControlName="email" class="form-control form-control-lg"
+                placeholder="Email Address" />
+              
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <label class="form-label" for="form3Example4">Password</label>
+              <input type="password" id="password" formControlName="password" class="form-control form-control-lg"
+                placeholder="Password" />
+              
+            </div>
+
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <button (click)="login($event)" class="btn btn-primary btn-lg"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+
+<router-outlet></router-outlet>

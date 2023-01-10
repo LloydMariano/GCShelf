@@ -1,0 +1,49 @@
+<div class="box">
+    <div class="back"><a routerLink="/public/home"><i class="bi bi-arrow-left-circle-fill" style="font-size: 250%;"></i></a></div>
+    <div class="input-group">
+        <input type="search" class="form-control rounded col-md-2" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+        <button type="button" class="btn btn-primary">search</button>
+      </div>
+    
+     <h1> Book Details</h1>   
+    <div class="books" >
+        <div class="row">
+            <div class="col-4">
+                <div class="image">
+                    <img  [src]="'http://127.0.0.1:8000/'+books.coverpic_fld">
+                </div>
+                </div>
+
+                <div class="col-8">
+                    <div class="book-title">
+                        <h1 class="bookt">{{books.booktitle_fld}}</h1>
+                        
+                        <div class="book-details" >
+                            <div class="row row-cols-xs-3">
+                                <div class="col">
+                                    <p class="author"> {{books.author_fld}}</p>
+                                </div>
+                                <div class="col">
+                                    <p class="book_publisher">{{books.publisher_fld}}</p>
+                               </div>
+                               <div class="col">
+                                <p class="book_edition">{{books.booked_fld}}</p>
+                           </div>
+                                <div class="col">
+                                     <p class="category">{{books.categ_fld}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="btn btn-success" (click)="openDialog(books.id)"> Request a Copy</button>
+
+                        <div class="description">
+                            <h1>Description:</h1>
+                            <p>{{books.bookdet_fld}}</p>
+                        </div>
+
+                </div>
+            </div>
+                
+           </div>
+    </div>
